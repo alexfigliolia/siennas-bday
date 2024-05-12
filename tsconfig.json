@@ -1,0 +1,78 @@
+{
+  "ts-node": {
+    "swc": true,
+    "typeCheck": false
+  },
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "baseUrl": "./src",
+    "paths": {
+      "Components/*": [
+        "./Components/*"
+      ],
+      "Contexts/*": [
+        "./Contexts/*"
+      ],
+      "Hooks/*": [
+        "./Hooks/*"
+      ],
+      "Icons/*": [
+        "./Icons/*"
+      ],
+      "Images/*": [
+        "./Images/*"
+      ],
+      "Models/*": [
+        "./Models/*"
+      ],
+      "Pages/*": [
+        "./Pages/*"
+      ],
+      "Root/*": [
+        "./Root/*"
+      ],
+      "State/*": [
+        "./State/*"
+      ],
+      "Styles/*": [
+        "./Styles/*"
+      ],
+      "Tools/*": [
+        "./Tools/*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "ci",
+    "cd",
+    ".eslintrc.js",
+    "**/*.json",
+    "**/*.ts",
+    "**/*.js"
+  ],
+  "exclude": [
+    "__Stealth__",
+    "coverage",
+    "dist",
+    "node_modules"
+  ]
+}

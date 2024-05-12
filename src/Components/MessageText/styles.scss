@@ -1,0 +1,60 @@
+@import "Styles/variables";
+
+.message {
+  max-width: 700px;
+  color: #fff;
+  text-align: center;
+
+  @include center;
+  margin-top: -10%;
+
+  &>p {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    letter-spacing: -0.5vw;
+		font-size: 9vw;
+    font-weight: 600;
+		perspective: 1000px;
+		text-shadow: 0 0 2.5px rgba(#000, 0.5), 0 2.5px 5px rgba(#000, 0.5), 0 0 30px rgba(#000, 0.4);
+
+    @media #{$mq-550} {
+      letter-spacing: -0.5vw;
+			font-size: 8vw;
+			text-shadow: 0 0 2.5px rgba(#000, 0.5), 0 2.5px 5px rgba(#000, 0.5), 0 0 30px rgba(#000, 0.4);
+		}
+
+		@media #{$mq-670} {
+			letter-spacing: -0.25vw;
+			font-size: 5vw;
+			text-shadow: 0 0 2.5px rgba(#000, 0.5), 0 5px 10px rgba(#000, 0.5), 0 0 30px rgba(#000, 0.4);
+		}
+
+		@media #{$mq-957} {
+      font-size: 4.5vw;
+		}
+
+		@media #{$mq-1150} {
+			letter-spacing: -0.1vw;
+			font-size: min(7vw, 50px);
+		}
+
+    &>div {
+      display: flex;
+
+      & > span {
+        opacity: 0;
+        display: flex;
+        transform: scale(0) rotateX(180deg) translateY(-150%);
+        transform-style: preserve-3d;
+      }
+    }
+  }
+}
+
+.page.active .message > p > div > span {
+  opacity: 1;
+  transform: scale(1) rotateX(0deg) translateY(0%);
+}

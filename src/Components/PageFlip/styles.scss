@@ -1,0 +1,80 @@
+@import "Styles/variables";
+
+.flip-container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  perspective: 1600px;
+  transition: 
+    scale $shrinkDuration cubic-bezier(0.65, 0, 0.35, 1), opacity $shrinkDuration;
+
+  &>.flip-page {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: rotate $flipDuration cubic-bezier(0.65, 0, 0.35, 1);
+
+    &>.front,
+    &>.back {
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      backface-visibility: hidden;
+      box-shadow: 0 2px 5px rgba(#000, 0.2), 0 5px 15px rgba(#000, 0.4);
+      transition: rotate $flipDuration cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    &>.front {
+      rotate: y 0deg;
+
+      @media #{$mq-957} {
+        rotate: x 0deg;
+      }
+    }
+
+    &>.back {
+      rotate: y 180deg;
+      scale: y -1;
+      background: linear-gradient(to bottom, rgba(#000, 0), rgba(#000, 0.5)), url("Images/background-small.webp") no-repeat center;
+      background-size: cover;
+
+      @media #{$mq-670} {
+        background: linear-gradient(to bottom, rgba(#000, 0), rgba(#000, 0.5)), url("Images/background-large.webp") no-repeat center;
+        background-size: cover;
+      }
+
+      @media #{$mq-957} {
+        scale: x -1;
+        rotate: x 180deg;
+      }
+    }
+  }
+}
+
+.flip-container.active {
+  opacity: 1;
+}
+
+.flip-container.shrink {
+  scale: 0.7;
+
+  @media #{$mq-957} {
+    scale: 0.6;
+  }
+}
+
+.flip-container.flip {
+  &>.flip-page {
+    rotate: y 180deg;
+
+    @media #{$mq-957} {
+      rotate: x 180deg;
+    }
+  }
+}

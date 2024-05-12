@@ -1,0 +1,6 @@
+@use "Styles/variables";
+
+:export {
+  flipDuration: variables.$flipDuration;
+  shrinkDuration: variables.$shrinkDuration;
+}
