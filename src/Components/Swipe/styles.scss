@@ -1,7 +1,7 @@
 @import "Styles/variables";
 
 .swipe-right {
-  width: 200px;
+  width: 150px;
   height: 100px;
   display: flex;
   justify-content: flex-start;
@@ -10,7 +10,7 @@
   bottom: 1vh;
   opacity: 0;
   transition-duration: 0.4s;
-  left: calc(50% - 100px);
+  left: calc(50% - 75px);
   @media #{$mq-957} {
     rotate: 90deg;
     translate: -25px -20px;
@@ -53,7 +53,7 @@
 
   100% {
     opacity: 0;
-    translate: 150px;
+    translate: 100px;
   }
 }
 

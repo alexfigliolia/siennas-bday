@@ -6,12 +6,12 @@
 
 	@include center;
 
-	background: linear-gradient(to bottom, rgba(#000, 0), rgba(#000, 0.5)), url("Images/background-small.webp") no-repeat center;
+	background: linear-gradient(to bottom, rgba(#000, 0), rgba(#000, 0.3)), url("Images/background-small.webp") no-repeat center;
 	background-size: cover;
 	transform: scaleX(-1);
 
 	@media #{$mq-670} {
-		background: linear-gradient(to bottom, rgba(#000, 0), rgba(#000, 0.5)), url("Images/background-large.webp") no-repeat center;
+		background: linear-gradient(to bottom, rgba(#000, 0), rgba(#000, 0.3)), url("Images/background-large.webp") no-repeat center;
 		background-size: cover;
 	}
 }
