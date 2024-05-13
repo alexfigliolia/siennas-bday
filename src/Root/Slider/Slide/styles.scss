@@ -11,27 +11,42 @@
   }
 
   &:nth-of-type(1) {
-    background: url("Images/background-small.webp") no-repeat center;
+    background: url("Images/slide-1-small.webp") no-repeat center;
     background-size: cover;
 
     @media #{$mq-670} {
-      background: url("Images/background-large.webp") no-repeat center;
+      background: url("Images/slide-1-large.webp") no-repeat center;
       background-size: cover;
     }
   }
 
   &:nth-of-type(2) {
-    background: url("Images/slide-2.webp") no-repeat center;
+    background: url("Images/slide-2-small.webp") no-repeat center;
     background-size: cover;
+
+    @media #{$mq-670} {
+      background: url("Images/slide-2-large.webp") no-repeat center;
+      background-size: cover;
+    }
   }
 
   &:nth-of-type(3) {
-    background: url("Images/slide-3.webp") no-repeat center;
+    background: url("Images/slide-3-small.webp") no-repeat center;
     background-size: cover;
+
+    @media #{$mq-670} {
+      background: url("Images/slide-3-large.webp") no-repeat center;
+      background-size: cover;
+    }
   }
 
   &:nth-of-type(4) {
-    background: url("Images/slide-4.webp") no-repeat center;
+    background: url("Images/slide-4-small.webp") no-repeat center;
     background-size: cover;
+
+    @media #{$mq-670} {
+      background: url("Images/slide-4-large.webp") no-repeat center;
+      background-size: cover;
+    }
   }
 }

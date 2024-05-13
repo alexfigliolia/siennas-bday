@@ -3,15 +3,27 @@
 .screen-loader {
 	height: 100vh;
 	width: 100%;
-
-	@include center;
-
-	background: linear-gradient(to bottom, rgba(#000, 0), rgba(#000, 0.3)), url("Images/background-small.webp") no-repeat center;
-	background-size: cover;
-	transform: scaleX(-1);
-
-	@media #{$mq-670} {
-		background: linear-gradient(to bottom, rgba(#000, 0), rgba(#000, 0.3)), url("Images/background-large.webp") no-repeat center;
-		background-size: cover;
+	position: relative;
+	background: linear-gradient(to right, #fd5aed, #f4196d);
+	&>.counter,
+	&>.shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+	&>.counter {
+		@include center;
+		&>span {
+			font-size: min(30vw, 200px);
+			color: #fff;
+			font-weight: 700;
+			z-index: 2;
+		}
+	}
+	&>.shadow {
+		background-color: rgba(#000, 0.1);
+		transform-origin: 50% 0%;
 	}
 }

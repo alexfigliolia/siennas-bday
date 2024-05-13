@@ -4,12 +4,17 @@ export interface IScreen {
 }
 
 export interface IFlipper {
-  active: boolean;
   flip: boolean;
   shrink: boolean;
   classes: string;
+  slides: number;
 }
 
 export interface ISlider {
   index: number;
+}
+
+export interface ILoader {
+  slides: boolean;
+  preloaded: boolean;
 }

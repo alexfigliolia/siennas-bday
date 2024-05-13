@@ -13,12 +13,14 @@
     "test": "tsx ci/commands/Test.ts"
   },
   "dependencies": {
+    "@figliolia/event-emitter": "^1.1.4",
     "@figliolia/galena": "^2.2.6",
     "@figliolia/page-switch": "^1.0.7",
     "@figliolia/promises": "^1.0.1",
     "@figliolia/react-galena": "^3.1.8",
-    "@figliolia/ripples": "^1.0.2",
+    "@figliolia/ripples": "^1.0.5",
     "@figliolia/task-queue": "^1.0.2",
+    "canvas-confetti": "^1.9.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tsx": "^4.10.0"
@@ -26,6 +28,7 @@
   "devDependencies": {
     "@figliolia/child-process": "^1.0.1",
     "@swc/core": "^1.3.99",
+    "@types/canvas-confetti": "^1.6.4",
     "@types/jest": "^29.5.10",
     "@types/node": "^20.12.11",
     "@types/react": "^18.2.47",

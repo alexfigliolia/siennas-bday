@@ -5,23 +5,21 @@ import { TaskQueue } from "Tools/TaskQueue";
 import type { IFlipper } from "./types";
 
 export class FlipperModel extends State<IFlipper> {
+  public readonly MAX_SLIDES = 4;
   static flipDuration = this.sliceUnits(variables.flipDuration);
   static shrinkDuration = this.sliceUnits(variables.shrinkDuration);
   constructor() {
     super("Page Flip", {
+      slides: 0,
       flip: true,
       shrink: true,
-      active: false,
       classes: "flip shrink",
     });
   }
 
   public classList() {
     const tokens: string[] = [];
-    const { flip, shrink, active } = this.getState();
-    if (active) {
-      tokens.push("active");
-    }
+    const { flip, shrink } = this.getState();
     if (shrink) {
       tokens.push("shrink");
     }
@@ -38,22 +36,11 @@ export class FlipperModel extends State<IFlipper> {
     }, FlipperModel.shrinkDuration);
   }
 
-  public show(delay = 0) {
+  public show() {
+    this.unflip();
     TaskQueue.deferTask(() => {
-      this.unflip();
-      TaskQueue.deferTask(() => {
-        this.unshrink();
-      }, FlipperModel.flipDuration);
-    }, delay);
-  }
-
-  public activate() {
-    this.wrapUpdate(state => {
-      state.active = true;
-    });
-    TaskQueue.deferTask(() => {
-      this.show();
-    }, 2500);
+      this.unshrink();
+    }, FlipperModel.flipDuration);
   }
 
   public flip() {
@@ -81,6 +68,12 @@ export class FlipperModel extends State<IFlipper> {
     TaskQueue.deferTask(() => {
       Slider.activate(0);
     }, FlipperModel.shrinkDuration);
+  }
+
+  public registerSlide() {
+    this.update(state => {
+      state.slides = state.slides + 1;
+    });
   }
 
   private wrapUpdate(callback: (state: IFlipper) => void) {

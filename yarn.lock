@@ -595,6 +595,11 @@
   resolved "https://registry.yarnpkg.com/@figliolia/event-emitter/-/event-emitter-1.1.2.tgz#38f30c3ebd20a98db2f4c02c20cab9d7e75b8b83"
   integrity sha512-45SrozPyiFZALXnMGK85DU7QbQLnreDJEBCztl2HZGnO5mK0dXkPwYFwgOO/eSfbJG8X4UmchYzchMNLwEGMwg==
 
+"@figliolia/event-emitter@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/@figliolia/event-emitter/-/event-emitter-1.1.4.tgz#c4377c808ee7e4a19dfe37d8a0277b7f9a763467"
+  integrity sha512-0UmkV2yY2h+HEYY96FbEYMumNK8A9XNqwWtA4r7wgnyjbQ7ehtRS38+bMO2+5sdbnibRIbZYC1U4hgnjb701cA==
+
 "@figliolia/galena@^2.2.6":
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/@figliolia/galena/-/galena-2.2.6.tgz#1a089ea9438dfc90b6428a9fc2a85ba0d2067980"
@@ -619,10 +624,12 @@
   dependencies:
     "@figliolia/galena" "^2.2.6"
 
-"@figliolia/ripples@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@figliolia/ripples/-/ripples-1.0.2.tgz#2a4b63161de3c11f286472dd0d5faad32de16189"
-  integrity sha512-Ix/7DRi6UGaUjEUoS8y7YyULWJyARDv+eDQF0nmeYPlVqo5q5RpBl2OIEJ7TSq8fghfoETmxTP9RfQEYoeRsxg==
+"@figliolia/ripples@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@figliolia/ripples/-/ripples-1.0.5.tgz#55fe338f3009abd65e5785601a3c972d3556299d"
+  integrity sha512-RaWd6eJIGQMxqwXdL8JES5lqVZ2S01BhlMhT68bWo9UYVuAewD0c1wVC/Xn41EKdGqiJNbKfS2Now5XW50/S9Q==
+  dependencies:
+    "@figliolia/event-emitter" "^1.1.4"
 
 "@figliolia/task-queue@^1.0.2":
   version "1.0.2"
@@ -1122,6 +1129,11 @@
   integrity sha512-WXCyOcRtH37HAUkpXhUduaxdm82b4GSlyTqajXviN4EfiuPgNYR109xMCKvpl6zPIpua0DGlMEDCq+g8EdoheQ==
   dependencies:
     "@babel/types" "^7.20.7"
+
+"@types/canvas-confetti@^1.6.4":
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/@types/canvas-confetti/-/canvas-confetti-1.6.4.tgz#620fd8d78b335d6a4046c0f73236d6988b37552a"
+  integrity sha512-fNyZ/Fdw/Y92X0vv7B+BD6ysHL4xVU5dJcgzgxLdGbn8O3PezZNIJpml44lKM0nsGur+o/6+NZbZeNTt00U1uA==
 
 "@types/estree@1.0.5":
   version "1.0.5"
@@ -1700,6 +1712,11 @@ caniuse-lite@^1.0.30001538, caniuse-lite@^1.0.30001565:
   version "1.0.30001576"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001576.tgz#893be772cf8ee6056d6c1e2d07df365b9ec0a5c4"
   integrity sha512-ff5BdakGe2P3SQsMsiqmt1Lc8221NR1VzHj5jXN5vBny9A6fpze94HiVV/n7XRosOlsShJcvMv5mdnpjOGCEgg==
+
+canvas-confetti@^1.9.3:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/canvas-confetti/-/canvas-confetti-1.9.3.tgz#ef4c857420ad8045ab4abe8547261c8cdf229845"
+  integrity sha512-rFfTURMvmVEX1gyXFgn5QMn81bYk70qa0HLzcIOSVEyl57n6o9ItHeBtUSWdvKAPY0xlvBHno4/v3QPrT83q9g==
 
 chalk@^2.4.2:
   version "2.4.2"
