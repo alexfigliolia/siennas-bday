@@ -1,5 +1,6 @@
 import path from "path";
 import { defineConfig } from "vite";
+import viteCompression from "vite-plugin-compression";
 import { createHtmlPlugin } from "vite-plugin-html";
 import react from "@vitejs/plugin-react";
 import { BuildSettings } from "./devtools/build-settings/BuildSettings";
@@ -31,6 +32,14 @@ export default defineConfig({
       entry: path.join(BuildSettings.SRC, "Root/index.tsx"),
       template: "public/index.html",
       viteNext: true,
+    }),
+    viteCompression({
+      algorithm: "gzip",
+      filter: /.(js|mjs|json|css|html|jpg|webp|png|avif)$/i,
+    }),
+    viteCompression({
+      algorithm: "brotliCompress",
+      filter: /.(js|mjs|json|css|html|jpg|webp|png|avif)$/i,
     }),
   ],
   optimizeDeps: {
